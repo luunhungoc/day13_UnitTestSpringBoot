@@ -4,12 +4,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MathService {
-
     MathHelper mathHelper;
-    public MathService(){
-        this.mathHelper=new MathHelper();
+    public MathService(MathHelper mathHelper){
+        this.mathHelper=mathHelper;
     }
-
     public int add(int a, int b){
         return mathHelper.add(a,b);
     }
